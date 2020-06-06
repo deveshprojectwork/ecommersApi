@@ -1,13 +1,10 @@
 const express = require("express");
+const app = express();
 
- const app = express();
 const port = 3003;
 
-app.get("/",(req,res)=>{
-    res.send("Hello world")
-    console.log("Connection successfull")
+app.get("/", (req,res)=>{
+    res.send("hello world, this is live");
 })
-console.log("this is my page");
-app.listen(port,()=> console.log(`The running port is ${port}`) )
 
-
+app.listen(port,()=> console.log(`This post is my : ${port}`));
